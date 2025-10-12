@@ -7,9 +7,9 @@
 
 # bvhio
 
-Lightweight libary for reading, editing and creating [Biovision .bvh](https://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/BVH.html) files. Deserializes files into a hierarchical spatial structure like transforms in Unity or Unreal.
+Lightweight library for reading, editing and creating [Biovision .bvh](https://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/BVH.html) files. Deserializes files into a hierarchical spatial structure like transforms in Unity or Unreal.
 
-Data for each joint is provided in local and world space and does support modifing the hierarchy itself without losing the keyframe data. The spatial structure does also allow for editing the motion or rest pose data. This libary supports also deserializing and serialising .bvh files into a simplified structure that represents the key data from the file.
+Data for each joint is provided in local and world space and does support modifying the hierarchy itself without losing the keyframe data. The spatial structure does also allow for editing the motion or rest pose data. This library supports also deserializing and serializing .bvh files into a simplified structure that represents the key data from the file.
 
 ## Install
 ``` batch
@@ -17,7 +17,7 @@ pip install bvhio
  ```
 
 ## Why and intention
-This libary is a side product of my master thesis, in order to extract conveniently local and world data features from a humanoid skeleton hierarchy. I could not find any libary that could do that, without bloat or the features I required for extraction or modification.
+This library is a side product of my master thesis, in order to extract conveniently local and world data features from a humanoid skeleton hierarchy. I could not find any library that could do that, without bloat or the features I required for extraction or modification.
 
 ## Notes
 - The package [spatial-transform](https://github.com/Wasserwecken/spatial-transform) is used as base object for joints and provides the most properties and methods.
@@ -32,7 +32,7 @@ This libary is a side product of my master thesis, in order to extract convenien
     - Animation data can be modified with both methods.
     - The transform hierarchy allows for easy modifications of rest and motion data.
 - Animation
-    - Supports modifing keyframe, rest positon and final pose data.
+    - Supports modifying keyframe, rest position and final pose data.
     - Supports joint special modifications, like changing the joint-roll
     - Keyframes are stored in local space and as difference to the rest pose.
     - Keyframes support Position, Rotation and Scale.
@@ -289,7 +289,7 @@ bvhRoot = bvhio.convertHierarchyToBvh(hierarchyRoot, hierarchyRoot.getKeyframeRa
 bvhio.writeBvh('test.bvh', bvhio.BvhContainer(bvhRoot, len(bvhRoot.Keyframes), 1/30))
 ```
 
-### Isolate joints from the hierachy (remove root joint)
+### Isolate joints from the hierarchy (remove root joint)
 ```python
 import bvhio
 
